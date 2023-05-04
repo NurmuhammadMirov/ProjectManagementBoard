@@ -1,5 +1,6 @@
 import Task from "../../components/Task/Task";
 import useDataFetching from "../../hooks/useDataFetching";
+import { Link } from "react-router-dom";
 import './Backlog.css';
 
 function Backlog() {
@@ -8,22 +9,27 @@ function Backlog() {
 
     
     return (
-        <div className="Backlog-wrapper">
-            <h2>Backlog</h2>
-            <div className="Tasks-wrapper">
-                {loading || error ? (
-                    <span>{error || 'Loading...'}</span>
-                ) : (
-                    tasks.map((task) => (
-                        <Task
-                            key={task.id}
-                            title={task.title}
-                            body={task.body}
-                        />
-                    ))
-                )
+        <div>
+            <button>
+                <Link to='/'>Board</Link>
+            </button>
+            <div className="Backlog-wrapper">
+                <h2>Backlog</h2>
+                <div className="Tasks-wrapper">
+                    {loading || error ? (
+                        <span>{error || 'Loading...'}</span>
+                    ) : (
+                        tasks.map((task) => (
+                            <Task
+                                key={task.id}
+                                title={task.title}
+                                body={task.body}
+                            />
+                        ))
+                    )
 
-                }
+                    }
+                </div>
             </div>
         </div>
     )

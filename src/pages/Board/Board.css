@@ -8,3 +8,19 @@
     flex-direction: column;
   }
 }
+
+button {
+  align-self: end;
+  margin: 5px;
+  padding: 7px 10px;
+  background-color: #583D71;
+  border: none;
+  border-radius: 8px;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
