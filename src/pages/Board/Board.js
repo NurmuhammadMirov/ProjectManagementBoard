@@ -47,6 +47,9 @@ function Board() {
       <button>
         <Link to='/backlog'>Backlog</Link>
       </button>
+      <div>
+        Drag and Drop tasks to any other blocks
+      </div>
       <div className='Board-wrapper'>
         {lanes.map((lane) => (
           <Lane
